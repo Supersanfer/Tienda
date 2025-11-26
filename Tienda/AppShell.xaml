@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Tienda.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Tienda"
+    Title="Tienda">
+
+    <TabBar>
+        <ShellContent Title="Principal" ContentTemplate="{DataTemplate local:Bienvenida}"/>
+        <ShellContent Title="Alta" ContentTemplate="{DataTemplate local:Altas}"/>
+        <ShellContent Title="Consulta Listas" ContentTemplate="{DataTemplate local:ConsultaListas}" />
+        <ShellContent Title="Consulta Individual" ContentTemplate="{DataTemplate local:ConsultaIndividual}" />
+    </TabBar>
+
+</Shell>

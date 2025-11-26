@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tienda.Altas"
+             Title="Altas">
+    <VerticalStackLayout>
+        <Grid RowDefinitions="1*" ColumnDefinitions="*,*" VerticalOptions="Start" Margin="15" ColumnSpacing="25">
+            <Grid Grid.Column="0" RowDefinitions="Auto, Auto, *">
+                <Image
+                    x:Name="imgLogo"
+                    Grid.Row="0"
+                    Source="logo_ascend.png"
+                    Aspect="AspectFill"
+                    HeightRequest="150"
+                    WidthRequest="250"/>
+                <Label
+                    Grid.Row="1"
+                    Text="Clientes: "/>
+                <Border Grid.Row="2">
+                    <ListView
+                        x:Name="lvClientes"
+                        Grid.Row="2"
+                        HeightRequest="150"
+                        VerticalOptions="Start"
+                        ItemSelected="lvClientes_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <Label
+                                            Text="{Binding Apellidos}"/>
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            Text="{Binding Nombre}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Border>
+            </Grid>
+            <VerticalStackLayout
+                Grid.Column="1"
+                Spacing="10">
+                <Label
+                    Text="Nombre:"/>
+                <Entry
+                    x:Name="entNombre" Placeholder="Ingrese su nombre"/>
+                <Label
+                    Text="Apellidos:"/>
+                <Entry
+                   x:Name="entApellidos" Placeholder="Ingrese sus apellidos"/>
+                <Label
+                    Text="Ciudad:"/>
+                <Entry
+                   x:Name="entCiudad" Placeholder="Ingrese su ciudad"/>
+                <Label
+                    Text="Correo Electrónico:"/>
+                <Entry
+                   x:Name="entCorreoElectronico" Placeholder="Ingrese su correo electrónico"/>
+                <Label
+                    Text="Comentarios:"/>
+                <Entry
+                   x:Name="entComentarios" HeightRequest="150" VerticalTextAlignment="Start"/>
+                <HorizontalStackLayout>
+                    <CheckBox
+                        x:Name="cbEsVip"/>
+                    <Label
+                        Text="VIP"
+                        VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tienda.Bienvenida"
+             Title="Bienvenida"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout>
+        <Grid RowDefinitions="Auto, Auto, Auto" 
+              ColumnDefinitions="Auto, Auto" 
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              ColumnSpacing="-60">
+            <Image 
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                HeightRequest="250" 
+                WidthRequest="250"
+                Aspect="AspectFit"
+                Source="logo_ascend.png"/>
+            <Label 
+                Grid.Column="1"
+                Grid.Row="0"
+                Text="ASCEND"
+                TextColor="#FFD700" 
+                FontAttributes="Bold"
+                FontSize="60"
+                FontFamily="Empty"
+                VerticalOptions="End" 
+                HorizontalOptions="Start"
+                Margin="0,0,0,-10"/>
+            <Label 
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="GLOBAL SOLUTIONS"
+                TextColor="White"
+                FontSize="20"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalOptions="Start" 
+                Margin="5,0,0,0"/>
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                x:Name="lblFechaHoraActual"
+                Text="dd:MM:yyy"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
