@@ -18,7 +18,7 @@
                         <x:String>Ninguna</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
-            </Picker>
+            </Picker>   
 
             <Picker
                 x:Name="PickerVip"
@@ -65,7 +65,8 @@
         </Grid>
         <CollectionView
             x:Name="CollectionViewClientes"
-            ItemsSource="{Binding ClientesFiltrados}"> <!-- Hay que crear el array en el codigo CS -->
+            ItemsSource="{Binding ClientesFiltrados}"
+            Margin="25"> <!-- Hay que crear el array en el codigo CS -->
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid

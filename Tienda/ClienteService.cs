@@ -43,5 +43,34 @@ namespace Tienda
         {
             return Clientes.Values.ToList();
         }
+        
+        public bool ExisteCliente(String correo)
+        {
+            return Clientes.ContainsKey(correo);
+        }
+        public Cliente ObtenerCliente(string correoElectronico)
+        {
+            if (Clientes.ContainsKey(correoElectronico))
+            {
+                return Clientes[correoElectronico];
+            }
+
+            return null;
+        }
+
+        public void AgregarCliente(Cliente cliente)
+        {
+            Clientes[cliente.Correo] = cliente;
+        }
+
+        public void EliminarCliente(string correo)
+        {
+            if (Clientes.ContainsKey(correo))
+            {
+                Clientes.Remove(correo);
+            }
+        }
+
+
     }
 }
