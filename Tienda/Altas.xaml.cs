@@ -14,4 +14,21 @@ public partial class Altas : ContentPage
     {
 
     }
+
+    private void Anyadir_Clicked(object sender, EventArgs e)
+    {
+
+    }
+    private void Modificar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+    private void Borrar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+    private void Limpiar_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

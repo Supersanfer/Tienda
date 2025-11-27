@@ -3,10 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tienda.ConsultaIndividual"
              Title="ConsultaIndividual">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+        Margin="15">
+        <Entry
+            x:Name="EntBusqueda"
+            Placeholder="Buscar"
+            TextChanged="EntBusqueda_TextChanged"/>
+
+        <HorizontalStackLayout
+            Margin="15"
+            HorizontalOptions="Center"
+            Spacing="35">
+            <Button
+                x:Name="BtnAnterior"
+                Text="Anterior"
+                Clicked="BtnAnterior_Clicked"/>
+            <Button
+                x:Name="BtnSiguiente"
+                Text="Siguiente"
+                Clicked="BtnSiguiente_Clicked"/>
+        </HorizontalStackLayout>
+
+        <ScrollView>
+            <VerticalStackLayout
+                Margin="25">
+                <CollectionView
+                    x:Name="CollectionViewClientesIndividual"
+                    HorizontalOptions="Center"
+                    ItemsSource="{Binding ClientesFiltrados}"
+                    SelectedItem="{Binding ClienteSeleccionado, Mode=TwoWay}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout
+                                HorizontalOptions="Center">
+                                <Image
+                                    Source="{Binding Vip}"/> <!-- TODO: Ver converters profe. Preguntar IA o profe. Sin implementar -->
+                                <Label
+                                    Text="{Binding Nombre}"/>
+                                <Label
+                                    Text="{Binding Apellidos}"/>
+                                <Label
+                                    Text="{Binding Ciudad}"/>
+                                <Label
+                                    Text="{Binding Correo}"/>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

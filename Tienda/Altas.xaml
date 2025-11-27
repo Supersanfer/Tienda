@@ -72,4 +72,18 @@
             </VerticalStackLayout>
         </Grid>
     </VerticalStackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="Anyadir_Clicked"
+            Text="Añadir"/>
+        <ToolbarItem
+            Clicked="Modificar_Clicked"
+            Text="Modificar"/>
+        <ToolbarItem
+            Clicked="Borrar_Clicked"
+            Text="Borrar"/>
+        <ToolbarItem
+            Clicked="Limpiar_Clicked"
+            Text="Limpiar"/>
+    </ContentPage.ToolbarItems>
 </ContentPage>
